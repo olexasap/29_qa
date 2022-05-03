@@ -1,5 +1,5 @@
 function isPalindrom(str) {
-    let reg = /\w/g;
+    let reg = /\p{L}/gu;
     let strReverse = str.toLowerCase().split('').reverse().join('').match(reg);
 
     for (let i = 0; i < strReverse.length; i++) {
