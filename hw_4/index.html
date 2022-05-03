@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+    <script src="task3.js" defer></script>
+    <style>
+        article {
+            margin: 2vh;
+            text-align: center;
+            border: 1px solid darkorchid;
+        }
+        .temp {
+            padding-top: 3vh;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body style="display: flex; width: 100vw; height: 97vh;">
+    <aside class="aside" style="width: 30%; height: 100%; line-height: 3em;"></aside>
+    <main style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr);">
+        <article style="grid-area: 1 / 1 / 2 / 4;">
+            <h2 class="label">Task 3:2</h2>
+            <button onclick="getEnterpriseName(prompt('Какие отделы ищем? (Ввести название или id)'))">
+                Найти предприятия по отделу
+            </button>
+            <div class="task3_2 temp"></div>
+        </article>
+        <article>
+            <h2 class="label">Task 3:3</h2>
+            <button onclick="addEnterprise(prompt('Введите название добавляемого предприятия'))">
+                Добавить предприятие
+            </button>
+        </article>
+        <article>
+            <h2 class="label">Task 3:4</h2>
+            <button onclick="addDepartment(prompt('Введите id предприятия в какое добавляем отдел'), prompt('Введите названия отдела'))">
+                Добавить отдел в предприятие
+            </button>
+        </article>
+        <article>
+            <h2 class="label">Task 3:5</h2>
+            <button onclick="editEnterprise(prompt('Введите id предприятия, название какого меняем'), prompt('Введите новое название'))">
+                Изменить название предприятия
+            </button>
+        </article>
+        <article>
+            <h2 class="label">Task 3:6</h2>
+            <button onclick="editDepartment(prompt('Введите id отдела, название какого меняем'), prompt('Введите новое название'))">
+                Изменить название отдела
+            </button>
+        </article>
+        <article>
+            <h2 class="label">Task 3:7</h2>
+            <button onclick="deleteEnterprise(prompt('Введите id ненужного предприятия'))">
+                Удалить предприятие
+            </button>
+        </article>
+        <article>
+            <h2 class="label">Task 3:8</h2>
+            <button onclick="deleteDepartment(prompt('Введите id ненужного отдела'))">
+                Удалить отдел
+            </button>
+            <div class="task3_8 temp"></div>
+        </article>
+        <article style="grid-area: 4 / 1 / 5 / 4;">
+            <h2 class="label">Task 3:9</h2>
+            <button onclick="moveEmployees(prompt('Введите id отдела откуда забираем сотрудников'), prompt('И id отдела куда переводим'))">
+                Перевести сотрудников
+            </button>
+            <div class="task3_9 temp"></div>
+        </article>
+    </main>
+</body>
+</html>
