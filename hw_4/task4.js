@@ -75,3 +75,17 @@ const company = [
     }
 ]
 
+function treeView(array, print) {
+    for (let entry in array) {
+        if (array[entry].parent == null) {
+            console.log(array[entry].name + ' (' + array[entry].users_count + ')');
+        }
+        else {
+            console.log(print + array[entry].name + ' (' + array[entry].users_count + ')');
+        }
+        treeView(array[entry].children, print + '——');
+    }
+    return null;
+}
+
+treeView(company, '');
